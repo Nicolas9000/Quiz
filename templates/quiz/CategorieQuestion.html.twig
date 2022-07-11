@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+
+		{% for CategorieQuizz in CategorieQuiz %}
+			<div>
+				<p>{{ CategorieQuizz.question }}</p>
+				
+			</div>
+		{% endfor %}
+
+
+	</div>
+
+{% endblock %}

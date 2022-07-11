@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+		<h1>Cliquez sur un quiz</h1>
+		{% for quiz in quizz %}
+			<div>
+				<p>{{ quiz.question }}</p>
+                <a href="{{ path('update_quizz', {id:quiz.id}) }}" class="btn btn-primary">Edit</a>
+				<a href="{{ path('delete_quiz', {id:quiz.id}) }}" class="btn btn-danger">Delete</a>
+			</div>
+		{% endfor %}
+	</div>
+
+{% endblock %}

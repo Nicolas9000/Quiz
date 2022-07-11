@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+		{% for users in user %}
+			<div>
+                <p>{{ users.email }}</p>
+				<p>{{ users.username }}</p>
+                <a href="{{ path('update_user', {id:users.id}) }}" class="btn btn-primary">Edit</a>
+				<a href="{{ path('user_delete', {id:users.id}) }}" class="btn btn-danger">Delete</a>
+			</div>
+		{% endfor %}
+	</div>
+
+{% endblock %}
